@@ -91,6 +91,7 @@
             android:onClick="onForgotPasswordClicked"
             android:textColor="@color/white_black" />
     </LinearLayout>
+
     <Button
         android:id="@+id/btn_SignIn"
         android:layout_width="320dp"
