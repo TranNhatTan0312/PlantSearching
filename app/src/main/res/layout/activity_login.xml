@@ -1,60 +1,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-
-    <LinearLayout
-        android:id="@+id/LogoandBack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        >
-
-        <ImageView
-            android:id="@+id/back_321"
-            android:layout_width="30dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
-            android:contentDescription="back_button"
-
-            />
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:padding="20dp"
-            android:scaleType="centerCrop"
-
-            android:src="@drawable/logo" />
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/SignIn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/Get_Gmail"
-        android:text="Sign In"
+        android:text="Hello"
         android:textSize="35dp"
-        android:textColor="@color/my_white_4"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/white_black"
         android:fontFamily="@font/satoshi_bold"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp">
     </TextView>
+
+    <TextView
+        android:id="@+id/quotes_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Get_Gmail"
+        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/satoshi_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/quote_login"
+        android:textColor="@color/my_gray_2"
+        android:textSize="15dp"></TextView>
 
     <EditText
         android:id="@+id/Get_Gmail"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
-        android:textColor="@color/white"
+        android:textColor="@color/white_black"
         android:fontFamily="@font/satoshi_medium"
-
         android:hint="Enter Username or Email"
         android:textColorHint="@color/my_white_6"
         android:textSize="17dp">
@@ -64,7 +51,7 @@
         android:inputType="textPassword"
         android:id="@+id/get_Password"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_above="@+id/Forgot"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -76,26 +63,39 @@
         android:textColorHint="@color/my_white_6"
         android:textSize="17dp">
     </EditText>
-    <TextView
-        android:id="@+id/Forgot"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="17dp"
+        android:orientation="horizontal">
 
-        android:textColor="@color/my_orange"
+        <!-- Checkbox "Remember Me" -->
+        <CheckBox
+            android:layout_marginLeft="40dp"
+            android:id="@+id/checkbox_remember_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_black"
+            android:fontFamily="@font/satoshi_medium"
+            android:text="Remember me" />
 
-        android:fontFamily="@font/satoshi_medium"
-        android:layout_above="@+id/btn_SignIn"
-        android:layout_marginBottom="20dp"
-        android:gravity="left"
-        android:paddingLeft="50dp">
-    </TextView>
+        <!-- Link "Forgot Password" -->
+        <TextView
+            android:id="@+id/text_forgot_password"
+            android:layout_marginLeft="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:clickable="true"
+            android:fontFamily="@font/satoshi_medium"
+            android:onClick="onForgotPasswordClicked"
+            android:textColor="@color/white_black" />
+    </LinearLayout>
     <Button
         android:id="@+id/btn_SignIn"
         android:layout_width="320dp"
         android:layout_height="70dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/my_orange_2"
+        android:backgroundTint="@color/my_green"
         android:fontFamily="@font/satoshi_bold"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center"
@@ -127,8 +127,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:textSize="17dp"
-        android:text="Not a member? Register now"
-        android:textColor="@color/my_white_6"
+        android:text="@string/gotosignup"
+        android:textColor="@color/white_black"
         android:fontFamily="@font/satoshi_medium"
         />
 
