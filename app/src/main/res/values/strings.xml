@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">PlantSearching</string>
+    <string name="play_music">Now playing</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">My Application</string>
+    <string name="quote">You can identify the plant you don\'t know  \tthrough your camera. </string>
+    <string name="quote2"> S2PLAY is a proprietary Swedish audio streaming \and media services provider.</string>
+
+
 </resources>
